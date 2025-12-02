@@ -6,7 +6,7 @@
     "homepage": "https://github.com/FarelRA/zen-profile-avatar-menu",
     "style": "https://raw.githubusercontent.com/FarelRA/zen-profile-avatar-menu/main/chrome.css",
     "readme": "https://raw.githubusercontent.com/FarelRA/zen-profile-avatar-menu/main/README.md",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/FarelRA/zen-profile-avatar-menu/main/image.png",
     "author": "FarelRA",
     "preferences": "https://raw.githubusercontent.com/FarelRA/zen-profile-avatar-menu/main/preferences.json",
     "version": "1.0.0",

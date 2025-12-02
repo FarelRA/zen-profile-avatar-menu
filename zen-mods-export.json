@@ -1,0 +1,17 @@
+{
+  "62c2e09e-f79b-4ef1-9727-fef9898238d6": {
+    "id": "62c2e09e-f79b-4ef1-9727-fef9898238d6",
+    "name": "Profile Avatar Menu",
+    "description": "Replace hamburger menu icon with your Mozilla account profile avatar when signed in.",
+    "homepage": "https://github.com/FarelRA/zen-profile-avatar-menu",
+    "style": "https://raw.githubusercontent.com/FarelRA/zen-profile-avatar-menu/main/chrome.css",
+    "readme": "https://raw.githubusercontent.com/FarelRA/zen-profile-avatar-menu/main/README.md",
+    "preferences": "https://raw.githubusercontent.com/FarelRA/zen-profile-avatar-menu/main/preferences.json",
+    "author": "FarelRA",
+    "version": "1.0.0",
+    "tags": ["avatar", "profile", "menu", "fxa", "account"],
+    "createdAt": "2025-12-02",
+    "updatedAt": "2025-12-02",
+    "enabled": true
+  }
+}

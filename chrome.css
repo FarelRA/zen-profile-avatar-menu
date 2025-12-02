@@ -1,0 +1,48 @@
+/* Profile Avatar Menu - Zen Browser Mod
+ * Replaces the application menu button icon with your Mozilla account profile avatar when signed in
+ * 
+ * How it works:
+ * - Firefox/Zen sets --avatar-image-url CSS variable on :root when user is signed in with custom avatar
+ * - Firefox/Zen sets fxastatus="signedin" attribute on :root when user is signed in
+ * - This mod uses these to replace the hamburger menu icon with the user's avatar
+ */
+
+/* Main feature: Replace hamburger icon with profile avatar when signed in */
+:root[fxastatus="signedin"] #PanelUI-menu-button .toolbarbutton-icon {
+  list-style-image: var(--avatar-image-url) !important;
+  border-radius: 50% !important;
+  width: 16px !important;
+  height: 16px !important;
+  padding: 0 !important;
+}
+
+/* When avatar is available, style the button */
+:root[fxastatus="signedin"] #PanelUI-menu-button {
+  &:hover .toolbarbutton-icon {
+    filter: brightness(1.1) !important;
+  }
+  &:active .toolbarbutton-icon {
+    filter: brightness(0.9) !important;
+  }
+}
+
+/* Fallback: Use default avatar SVG when signed in but no custom avatar */
+:root[fxastatus="signedin"]:not([style*="--avatar-image-url"]) #PanelUI-menu-button .toolbarbutton-icon {
+  list-style-image: url("chrome://browser/skin/fxa/avatar.svg") !important;
+  border-radius: 50% !important;
+}
+
+/* Option: Add border around avatar */
+@media (-moz-bool-pref: "uc.profile-avatar-menu.show-border") {
+  :root[fxastatus="signedin"] #PanelUI-menu-button .toolbarbutton-icon {
+    outline: 2px solid var(--zen-primary-color, var(--toolbarbutton-icon-fill-attention, currentColor)) !important;
+    outline-offset: 1px !important;
+  }
+}
+
+/* Option: Hide the FxA toolbar button since avatar is now on hamburger menu */
+@media (-moz-bool-pref: "uc.profile-avatar-menu.hide-fxa-button") {
+  :root[fxastatus="signedin"] #fxa-toolbar-menu-button {
+    display: none !important;
+  }
+}

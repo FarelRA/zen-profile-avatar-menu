@@ -1,0 +1,14 @@
+[
+  {
+    "property": "uc.profile-avatar-menu.show-border",
+    "label": "Show border around avatar",
+    "type": "checkbox",
+    "defaultValue": false
+  },
+  {
+    "property": "uc.profile-avatar-menu.hide-fxa-button",
+    "label": "Hide Firefox Account toolbar button",
+    "type": "checkbox",
+    "defaultValue": false
+  }
+]
